@@ -12,19 +12,6 @@ class ListNode:
 
 # output: true
 
-# Memo
-# Strategy 1. Check all nodes from head and save the nodes to recognize the node has been already visited.
-# If duprication occurs, the list has circle. 
-# This approach is easy to implement but it requires O(n) space complexity.
-
-
-# Strategy 2. Use two pointers that speeds are diffrent. First pointer moves 1 node in 1 step
-# and second pointer moves 2 nodes in 1 step.
-# This approach is a bit tricky but it requires O(1) space complexity.
-
-# Example. A -> B -> C -> D -> A
-# First Pointer:  A -> B -> C -> D
-# Second Pointer: B -> D -> B -> D
 
 from typing import Optional
 
