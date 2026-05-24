@@ -50,16 +50,16 @@ class Solution:
     # Strategy 2
     def hasCycle(self, head: Optional["ListNode"]) -> bool:
         
-        pointer1 = head
-        pointer2 = head.next if head is not None else None
+        slow_pointer = head
+        fast_pointer = head.next if head is not None else None
 
-        while(pointer2 is not None):
+        while(fast_pointer is not None):
             # 1. Check
-            if pointer1 == pointer2:
+            if slow_pointer == fast_pointer:
                 return True
 
             # 2. Update
-            pointer1 = pointer1.next
-            pointer2 = None if pointer2.next is None else pointer2.next.next
+            slow_pointer = slow_pointer.next
+            fast_pointer = None if fast_pointer.next is None else fast_pointer.next.next
 
         return False
