@@ -18,3 +18,20 @@ Good
 
 Bad
 - 特になし
+
+Geminiによる英語の添削
+
+```
+# Memo
+# Strategy 1: Traverse all nodes from the head and store them to track visited nodes.
+# If a node is revisited, the list contains a cycle.
+# This approach is easy to implement but requires O(n) space complexity.
+
+# Strategy 2: Use two pointers moving at different speeds. The first pointer moves 1 node 
+# per step, while the second pointer moves 2 nodes per step.
+# This approach is a bit tricky but achieves O(1) space complexity.
+
+# Example: A -> B -> C -> D -> A
+# First Pointer:  A -> B -> C -> D
+# Second Pointer: B -> D -> B -> D
+```
