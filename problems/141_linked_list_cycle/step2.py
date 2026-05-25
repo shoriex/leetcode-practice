@@ -60,6 +60,8 @@ class Solution:
 
             # 2. Update
             slow_pointer = slow_pointer.next
-            fast_pointer = None if fast_pointer.next is None else fast_pointer.next.next
+            if fast_pointer.next is None:
+                break
+            fast_pointer = fast_pointer.next.next
 
         return False
